@@ -1,0 +1,44 @@
+------------------------------------------------------------
+1. Create index: vacodeindex
+------------------------------------------------------------
+
+------------------------------------------------------------
+2. Create web_cloud connector web_cloud_crime
+------------------------------------------------------------
+config = 
+{ "url" : "http://law.lis.virginia.gov/vacode/title18.2/chapter4/"}
+destination = 
+{ "action" : "addtotextindex", "index" : "vacodeindex" }
+
+curl "https://api.havenondemand.com/1/api/sync/createconnector/v1?flavor=web_cloud&connector=web_cloud_crime&config=%7B+%22url%22+%3A+%22http%3A%2F%2Flaw.lis.virginia.gov%2Fvacode%2Ftitle18.2%2Fchapter4%2F%22%7D&destination=%7B+%22action%22+%3A+%22addtotextindex%22%2C+%22index%22+%3A+%22vacodeindex%22+%7D&credentials=&credentials_policy=&schedule=&apikey=a5582336-3213-4ecf-919e-56f90ea2405b"
+
+curl -X POST --form "flavor=web_cloud" --form "connector=web_cloud_crime" --form "config={"url":"http://law.lis.virginia.gov/vacode/title18.2/chapter4/"}" --form "destination={"action":"addtotextindex","index":"vacodeindex"}" --form "apikey=a5582336-3213-4ecf-919e-56f90ea2405b" https://api.havenondemand.com/1/api/sync/createconnector/v1
+
+------------------------------------------------------------
+Start the connector web_cloud_crime
+------------------------------------------------------------
+curl "https://api.havenondemand.com/1/api/sync/startconnector/v1?connector=web_cloud_crime&destination=&ignore_previous_state=false&apikey=a5582336-3213-4ecf-919e-56f90ea2405b"
+
+curl -X POST --form "connector=web_cloud_crime" --form "ignore_previous_state=false" --form "apikey=a5582336-3213-4ecf-919e-56f90ea2405b" https://api.havenondemand.com/1/api/sync/startconnector/v1
+
+
+------------------------------------------------------------
+Connector Status: QUEUED\PROCESSING
+------------------------------------------------------------
+curl "https://api.havenondemand.com/1/api/sync/connectorstatus/v1?connector=web_cloud_crime&schedule_information=false&apikey=a5582336-3213-4ecf-919e-56f90ea2405b"
+
+curl -X POST --form "connector=web_cloud_crime" --form "schedule_information=false" --form "apikey=a5582336-3213-4ecf-919e-56f90ea2405b" https://api.havenondemand.com/1/api/sync/connectorstatus/v1
+
+------------------------------------------------------------
+Query vacodeindex for "robbery"
+------------------------------------------------------------
+curl "https://api.havenondemand.com/1/api/sync/querytextindex/v1?text=robbery&ignore_operators=false&indexes=vacodeindex&promotion=false&total_results=false&apikey=a5582336-3213-4ecf-919e-56f90ea2405b"
+
+curl -X POST --form "text=robbery" --form "ignore_operators=false" --form "indexes=vacodeindex" --form "promotion=false" --form "total_results=false" --form "apikey=a5582336-3213-4ecf-919e-56f90ea2405b" https://api.havenondemand.com/1/api/sync/querytextindex/v1
+
+
+Highlight query term "carjack", show total, 10 default terms (indexing is now DONE)
+
+curl "https://api.havenondemand.com/1/api/sync/querytextindex/v1?text=carjack&absolute_max_results=10&highlight=terms&ignore_operators=false&indexes=vacodeindex&print=all&promotion=false&total_results=true&apikey=a5582336-3213-4ecf-919e-56f90ea2405b"
+
+curl -X POST --form "text=carjack" --form "absolute_max_results=10" --form "highlight=terms" --form "ignore_operators=false" --form "indexes=vacodeindex" --form "print=all" --form "promotion=false" --form "total_results=true" --form "apikey=a5582336-3213-4ecf-919e-56f90ea2405b" https://api.havenondemand.com/1/api/sync/querytextindex/v1
