@@ -2,10 +2,11 @@
 AngelHack held at Washington DC on May 2016 - JAMJustice Team
 
 # Installation requirements
-Python 3.4
-Haven OnDemand (HOD) Client Library for Python - follow installation instructions provided at https://github.com/HPE-Haven-OnDemand/havenondemand-python
+* Python 3.4
+* Haven OnDemand (HOD) Client Library for Python - follow installation instructions provided at https://github.com/HPE-Haven-OnDemand/havenondemand-python
 
 # Execution example
+```
 C:\Users\pnayak\havenondemand-python\examples>python vacode.py
 ------------------------------------------------------------
 ---------------  INPUT--------------------------------------
@@ -30,15 +31,15 @@ Total number of matching codes found: 8
 JAMJustice - Think Twice!
 ------------------------------------------------------------
 Want to continue searching (yes/no)? -->
-
+```
 
 # Reference
-HPE Haven OnDemand APIs : https://dev.havenondemand.com/apis
-HPE Haven OnDemand Developer Documentation : https://dev.havenondemand.com/docs
-Client library for various programming languages (for example, Go, Python, iOS, Android, PHP, R, Windows Universal 8.1, Ruby et al.) to call Haven OnDemand APIs : https://github.com/HPE-Haven-OnDemand
-Client library for Python to call Haven OnDemand APIs : https://github.com/HPE-Haven-OnDemand/havenondemand-python
-Getting Started with Haven OnDemand : https://dev.havenondemand.com/docs/HowTo_GettingStarted.html
-Use Haven OnDemand Search Functionality : https://dev.havenondemand.com/docs/HowTo_Search.html
-Synchronous and Asynchronous API : https://dev.havenondemand.com/docs/AsynchronousAPI.htm
-Advanced Haven OnDemand Unstructured Text Indexing : https://dev.havenondemand.com/docs/HowTo_IndexAdvanced.html
-Web Cloud Connector : https://dev.havenondemand.com/docs/Connectors_Web.html
+* HPE Haven OnDemand APIs : https://dev.havenondemand.com/apis
+* HPE Haven OnDemand Developer Documentation : https://dev.havenondemand.com/docs
+* Client library for various programming languages (for example, Go, Python, iOS, Android, PHP, R, Windows Universal 8.1, Ruby et al.) to call Haven OnDemand APIs : https://github.com/HPE-Haven-OnDemand
+* Client library for Python to call Haven OnDemand APIs : https://github.com/HPE-Haven-OnDemand/havenondemand-python
+* Getting Started with Haven OnDemand : https://dev.havenondemand.com/docs/HowTo_GettingStarted.html
+* Use Haven OnDemand Search Functionality : https://dev.havenondemand.com/docs/HowTo_Search.html
+* Synchronous and Asynchronous API : https://dev.havenondemand.com/docs/AsynchronousAPI.htm
+* Advanced Haven OnDemand Unstructured Text Indexing : https://dev.havenondemand.com/docs/HowTo_IndexAdvanced.html
+* Web Cloud Connector : https://dev.havenondemand.com/docs/Connectors_Web.html
