@@ -29,9 +29,14 @@ curl "https://api.havenondemand.com/1/api/sync/connectorstatus/v1?connector=web_
 
 curl -X POST --form "connector=web_cloud_crime" --form "schedule_information=false" --form "apikey=a5582336-3213-4ecf-919e-56f90ea2405b" https://api.havenondemand.com/1/api/sync/connectorstatus/v1
 
-------------------------------------------------------------
-Query vacodeindex for "robbery"
-------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+Query vacodeindex for "robbery" via Python client library to call HOD APIs
+- Other options include Java, Node.js, Angular.js, Ruby, PHP, R, Go
+- Refer: https://github.com/HPE-Haven-OnDemand
+
+Additionally, HOD API available online to search - for example, 
+https://dev.havenondemand.com/account/text-indexes.html#q=carjack&p=1&index=vacodeindex
+-----------------------------------------------------------------------------------------------
 curl "https://api.havenondemand.com/1/api/sync/querytextindex/v1?text=robbery&ignore_operators=false&indexes=vacodeindex&promotion=false&total_results=false&apikey=a5582336-3213-4ecf-919e-56f90ea2405b"
 
 curl -X POST --form "text=robbery" --form "ignore_operators=false" --form "indexes=vacodeindex" --form "promotion=false" --form "total_results=false" --form "apikey=a5582336-3213-4ecf-919e-56f90ea2405b" https://api.havenondemand.com/1/api/sync/querytextindex/v1
